@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div id="wrapper">
+        <header>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="authors" content="Alexander Bean, Zach Cullison, Alyssa Gee, Veronica Wallace">
+            <meta name="description" content="Functional and informative website for a small business. Includes
+                                              menu prices, music clips, job application, and merchandise orders.
+                                              Friendly for consumer use.">
+            <title>JavaJam Purchase Order</title>
+            <link rel="icon" type="image/x-icon" href="favicon.ico">
+            <h1><a href="JJindex.html">JavaJam Coffee Bar</a></h1>
+            <link href="javajam.css" rel="stylesheet">
+        </header> 
+
+        <nav>
+          <ul>
+              <li><a href="JJindex.html">Home</a></li>
+              <li><a href="JJmenu.html">Menu</a></li>
+              <li><a href="JJmusic.html">Music</a></li>
+              <li><a href="JJjobs.html">Jobs</a></li>
+              <li><a href="JJgear.html">Gear</a></li>
+              <li class="dropdown">
+                <a href="JJorders.html" class="dropbtn">Orders</a>
+                <div class="dropdown-content">
+                  <a href="JJlogin.html">Place an Order</a>
+                  <a href="JJhistory.html">Search Order History</a>
+                </div>
+              </li>
+          </ul>
+      </nav>
+
+      <main>
+        <div id="herojobs"></div>
+        <h2>Step 1 - Merchandise Purchase Form</h2>
+
+        <p>Like any of our merchandise? Fill out the form below to start your purchase order.</p><br>
+
+        <form id="orderform" method="post" action="JJconfirm.html">
+            <table>
+                <tr id="cartTop">
+                    <td>Icon</th>
+                    <td id="cartCol"><strong>Product</strong></td>
+                    <td>Quantity</td>
+                    <td id="cartCol"><strong>Price</strong></td>
+                </tr>
+                <tr id="cart">
+                    <td><image id="cartImg" src="javashirt.jpg"></image></th>
+                    <td id="cartCol">JavaJam Shirt</td>
+                    <td><input type="number" id="quantity1" value="0" min="0" oninput="validity.valid||(value='');"></td>
+                    <td id="cartCol">$<span id="price1">0.00</span></td>
+                </tr>
+                <tr id="cart">
+                    <td><image id="cartImg" src="javamug.jpg"></image></th>
+                    <td id="cartCol">JavaJam Mug</td>
+                    <td><input type="number" id="quantity2" value="0" min="0" oninput="validity.valid||(value='');"></td>
+                    <td id="cartCol">$<span id="price2">0.00</span></td>
+                </tr>
+                <tr id="cart">
+                    <td><image id="cartImg" src="javahottumbler.png"></image></th>
+                    <td id="cartCol">JavaJam Hot Tumbler</td>
+                    <td><input type="number" id="quantity3" value="0" min="0" oninput="validity.valid||(value='');"></td>
+                    <td id="cartCol">$<span id="price3">0.00</span></td>
+                </tr>
+                <tr id="cart">
+                    <td><image id="cartImg" src="javacoldtumbler.png"></image></th>
+                    <td id="cartCol">JavaJam Cold Tumbler</td>
+                    <td><input type="number" id="quantity4" value="0" min="0" oninput="validity.valid||(value='');"></td>
+                    <td id="cartCol">$<span id="price4">0.00</span></td>
+                </tr>
+                <tr id="cart">
+                    <td><image id="cartImg" src="javacap.png"></image></th>
+                    <td id="cartCol">JavaJam Baseball Cap</td>
+                    <td><input type="number" id="quantity5" value="0" min="0" oninput="validity.valid||(value='');"></td>
+                    <td id="cartCol">$<span id="price5">0.00</span></td>
+                </tr>
+                <tr id="cart">
+                    <td><image id="cartImg" src="javahoodie.png"></image></th>
+                    <td id="cartCol">JavaJam Hoodie</td>
+                    <td><input type="number" id="quantity6" value="0" min="0" oninput="validity.valid||(value='');"></td>
+                    <td id="cartCol">$<span id="price6">0.00</span></td>
+                </tr>
+                <tr id="cart">
+                    <td><image id="cartImg" src="javahotcup.png"></image></th>
+                    <td id="cartCol">JavaJam Hot Cup</td>
+                    <td><input type="number" id="quantity7" value="0" min="0" oninput="validity.valid||(value='');"></td>
+                    <td id="cartCol">$<span id="price7">0.00</span></td>
+                </tr>
+                <tr id="cart">
+                    <td><image src="blankspace.jpg"></image></th>
+                    <td></td>
+                    <td>TOTAL:</td>
+                    <td id="cartCol">$<span id="total">0.00</span></td>
+                </tr>
+                <tr id="cartTop">
+                    <td></th>
+                    <td style="text-align: center">Please review order details for accuracy before continuing.</td>
+                    <td></td>
+                    <td id="cartCol"></td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <h2>Step 2 - Payment & Shipping Information</h2>
+
+        <p>Please fill out the following form to place your order.
+        </p>
+        <p>If your billing and shipping addresses are the same, you may only fill out the shipping address.</p>
+        <br>
+        <form id="orderform" method="post" action="JJconfirm.html">
+            <table>
+                <tr id="cartTop">
+                    <td>Shipping Address</th>
+                    <td id="cartCol"><strong>Billing Address</strong></td>
+                    <td>Payment</td>
+                </tr>
+                <tr id="cart">
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="text" id="shipname" name="shipname" placeholder="Full Name" required>
+                    </th>
+                    <td id="cartCol">
+                        <input id="inputSize" type="text" id="billname" name="billname" placeholder="Full Name">
+                    </td>
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="text" id="cardname" name="cardname" placeholder="Name on Card" required>
+                    </td>
+                </tr>
+                <tr id="cart">
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="text" id="shipaddress" name="shipaddress" placeholder="Shipping Address" required>
+                    </th>
+                    <td id="cartCol">
+                        <input id="inputSize" type="text" id="billaddress" name="billaddress" placeholder="Billing Address">
+                    </td>
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="number" id="cardnum" name="cardnum" placeholder="Card Number" required>
+                    </td>
+                </tr>
+                <tr id="cart">
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="text" id="shipcity" name="shipcity" placeholder="City" required>
+                    </th>
+                    <td id="cartCol">
+                        <input id="inputSize" type="text" id="billcity" name="billcity" placeholder="City">
+                    </td>
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="number" id="expmonth" name="expmonth" placeholder="Exp. Month (MM)" min="1" required>
+                    </td>
+                </tr>
+                <tr id="cart">
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="text" id="shipstate" name="shipstate" placeholder="State (Abv.)" maxlength="2" required>
+                    </th>
+                    <td id="cartCol">
+                        <input id="inputSize" type="text" id="billstate" name="billstate" placeholder="State (Abv.)" maxlength="2">
+                    </td>
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="number" id="cardnum" name="cardnum" placeholder="Exp. Year (YYYY)" min="2023" required>
+                    </td>
+                </tr>
+                <tr id="cart">
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="number" id="shipzip" name="shipzip" placeholder="ZIP" min="0" required>
+                    </th>
+                    <td id="cartCol">
+                        <input id="inputSize" type="number" id="billzip" name="billzip" placeholder="ZIP" min="0">
+                    </td>
+                    <td style="font-weight: normal">
+                        <input id="inputSize" type="number" id="cardcvv" name="cardcvv" placeholder="CVV" min="0" required>
+                    </td>
+                </tr>
+                <tr id="cartTop">
+                    <td></th>
+                    <td style="text-align: center">Please review order details for accuracy before placing order.</td>
+                    <td></td>
+                </tr>
+                <tr id="cartTop">
+                    <td>PIN: <span id="myPIN" style="font-weight: normal"></span></td></th>
+                    <td id="cartCol"><strong>CART TOTAL:</strong>$<span id="total1">0.00</span></td>
+                    <td id="cartCol"><button id="submit-button">Place Order</button></td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+
+            const myPIN = sessionStorage.getItem('myPIN');
+            const myPINElement = document.getElementById('myPIN');
+            myPINElement.textContent = myPIN;
+
+            const prices = {
+            product1: 14.95,
+            product2: 9.95,
+            product3: 20.00,
+            product4: 25.00,
+            product5: 18.00,
+            product6: 32.00,
+            product7: 3.50
+            };
+                  
+            const updatePrice = (productId) => {
+                const quantity = parseInt(document.getElementById(`quantity${productId}`).value) || 0;
+                const price = prices[`product${productId}`];
+                const totalPrice = quantity * price;
+                document.getElementById(`price${productId}`).innerText = totalPrice.toFixed(2);
+                updateTotal();
+            };
+
+            const updateTotal = () => {
+                const total = Object.keys(prices).reduce((sum, key) => {
+                    const quantity = parseInt(document.getElementById(`quantity${key.slice(-1)}`).value) || 0;
+                    const price = prices[key];
+                    return sum + (quantity * price);
+                }, 0);
+            document.getElementById('total').innerText = total.toFixed(2);
+            document.getElementById('total1').innerText = total.toFixed(2);
+            };
+                  
+            document.querySelectorAll('input[type="number"]').forEach(input => {
+                input.addEventListener('input', () => {
+                    const productId = input.id.slice(-1);
+                    updatePrice(productId);
+                });
+            });
+
+        </script>
+        <br>
+
+    </main>
+
+    <footer>Copyright &copy; 2023 JavaJam Coffee Bar<br>
+        <a href="mailto:abean2@bryant.edu">abean2@bryant.edu&nbsp;</a>
+        <a href="mailto:zcullison@bryant@bryant.edu">zcullison@bryant.edu</a>
+        <a href="mailto:agee@bryant.edu">agee@bryant.edu&nbsp;</a>
+        <a href="mailto:vwallace@bryant.edu">vwallace@bryant.edu&nbsp;</a>
+    </footer>
+
+        </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div id="wrapper">
+        <header>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="authors" content="Alexander Bean, Zach Cullison, Alyssa Gee, Veronica Wallace">
+            <meta name="description" content="Functional and informative website for a small business. Includes
+                                              menu prices, music clips, job application, and merchandise orders.
+                                              Friendly for consumer use.">
+            <title>Log-In to Your JavaJam Account</title>
+            <link rel="icon" type="image/x-icon" href="favicon.ico">
+            <h1><a href="JJindex.html">JavaJam Coffee Bar</a></h1>
+            <link href="javajam.css" rel="stylesheet">
+        </header> 
+
+        <nav>
+          <ul>
+              <li><a href="JJindex.html">Home</a></li>
+              <li><a href="JJmenu.html">Menu</a></li>
+              <li><a href="JJmusic.html">Music</a></li>
+              <li><a href="JJjobs.html">Jobs</a></li>
+              <li><a href="JJgear.html">Gear</a></li>
+              <li class="dropdown">
+                <a href="JJorders.html" class="dropbtn">Orders</a>
+                <div class="dropdown-content">
+                  <a href="JJlogin.html">Place an Order</a>
+                  <a href="JJhistory.html">Search Order History</a>
+                </div>
+              </li>
+          </ul>
+      </nav>
+
+      <main>
+        <div id="herojobs"></div>
+        <h2>Account Log-In</h2>
+
+        <p>Enter your account PIN to continue purchase order.</p><br>
+        
+        <form method="post" action="JJcart.html">
+            <label for="myPIN">Account PIN:</label>
+            <input type="number" name="myPIN" id="myPIN" min=0 oninput="validity.valid||(value='');"
+            placeholder="Test Cases are 1111, 2222, 3333, 4444" required>
+            <input type="submit" value="Submit" id="mySubmit">
+        </form>
+
+        <p>No PIN? Create an account <a href="JJcreateaccount.html">here</a>.</p>
+
+        <br>
+
+        <script>
+
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const myPIN = document.getElementById('myPIN').value;
+                sessionStorage.setItem('myPIN', myPIN);
+                window.location.href = 'JJcart.html';
+            });
+
+        </script>
+
+    </main>
+
+
+    <footer>Copyright &copy; 2023 JavaJam Coffee Bar<br>
+        <a href="mailto:abean2@bryant.edu">abean2@bryant.edu&nbsp;</a>
+        <a href="mailto:zcullison@bryant@bryant.edu">zcullison@bryant.edu</a>
+        <a href="mailto:agee@bryant.edu">agee@bryant.edu&nbsp;</a>
+        <a href="mailto:vwallace@bryant.edu">vwallace@bryant.edu&nbsp;</a>
+    </footer>
+
+        </html>

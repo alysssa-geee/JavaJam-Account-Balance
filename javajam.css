@@ -1,0 +1,229 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+main { padding-left: 0em;
+       padding-right: 0em;
+       padding-bottom: 2em;
+       padding-top: 0em;
+       background-color: #FEF6C2;
+       display: block; }
+main ul { padding-left: 2em; 
+          padding-right: 2em; }
+main h2, h3, h4, p, div, dl { padding-left: 1em;
+                              padding-right: 1em; }
+
+header { background-color: #D2B48C;
+         background-image: url("cup.jpg");
+         background-repeat: no-repeat;
+         color: #231814;
+         padding-left: 105px;
+         padding-top: 5px;
+         padding-bottom: 5px;
+         height: 128px; }
+header a { text-decoration: none; }
+header a:link { color: #231814}
+header a:visited { color: #231814}
+header a:hover { color: #FEF6C2 }
+
+body { background-color: #D2B48C;
+        color: #221811;
+        font-family: Tahoma, Arial, sans-serif;
+        margin: 0; }
+
+h1 { font-size: 2em; }
+h2 { color: #8C3826; }
+h3 { color: #8C3826;}
+h4 { background-color: #D2B48C;
+     color: #8C3826;
+     font-size: 1.2em;
+     padding-left: .5em;
+     padding-bottom: .25em;
+     text-transform: uppercase;
+     border-bottom: solid 2px #8C3826;
+     clear: left; }
+strong { padding: 20px; 
+         color: #8C3826}
+
+nav { text-align: center; }
+nav a { text-decoration: none; }
+nav a:link { color: #FEF6C2}
+nav a:visited { color: #D2B48C}
+nav a:hover { color: #CC9933 }
+nav ul { padding: 0em;
+         margin: 0;
+         font-size: 1.25em;
+         list-style: none; 
+         flex-direction: column; }
+nav li { padding-top: .5em;
+         padding-bottom: .5em;
+         padding-left: 1em;
+         padding-right: 1em;
+         width: 100%;
+         border-bottom: solid 1px #D2B48C; }
+
+footer { background-color: #D2B48C;
+         font-size: .60em; 
+         font-style: italic;
+         text-align: center;
+         padding: 1px;
+         border-top: solid 2px #8C3826;}
+
+form { display: flex;
+       flex-direction: column;
+       padding-left: 1em; width: 80%; }
+
+input, textarea { margin-bottom: .5em; }
+
+table { margin-right: auto;
+        margin-left: auto;
+        border-spacing: 0;
+        width: 90%; }
+
+td, th { padding: 10px; }
+
+td:nth-of-type(odd) { font-weight: bold;
+                      text-align: center; }
+
+tr:nth-of-type(odd) { background-color: #D2B48C; }
+
+.altrow { background-color: none}
+
+#wrapper { background-color: #231814;
+            padding: 0em; }
+
+#mugs { float: right;
+        margin: 0 0 5px 5px; }
+
+#details { text-align: center;
+           padding-left: 20%;
+           padding-right: 20%; 
+           overflow: auto; }
+
+#homehero { height: 300px;
+            background-size: 100% 100%;
+            background-image: url("road.jpg");
+            padding-bottom: 1.5em; }
+
+#heromugs { height: 300px;
+            background-size: 100% 100%;
+            background-image: url("threemugs.jpg") ;
+            padding-bottom: 1.5em; }
+
+#heroguitar { height: 300px;
+              background-size: 100% 100%;
+              background-image: url("guitar.jpg") ;
+              padding-bottom: 1.5em; }
+
+#herojobs { height: 300px;
+            background-size: 100% 100%;
+            background-image: url("herojobs.jpg");
+            padding-bottom: 1.5em; }
+
+#herocouch { height: 300px;
+             background-size: 100% 100%;
+             background-image: url("herocouch.jpg");
+             padding-bottom: 1.5em; }
+
+#mobile { display: inline; }
+
+#desktop { display: none; }
+
+#controls { display: block; 
+            margin-top: 1em; }
+
+#item { background-color: #FAF9F7; 
+        margin: 1em;
+        padding: 1em;
+        overflow: auto;
+        }
+
+#item img { float: right; }
+
+#cart { background-color: #FAF9F7; }
+
+#cartImg { width: 41px;
+           height: 38px;
+           border: 1px solid #000000 }
+
+#cart strong { color: #000000; }
+
+#cartTop { background-color: #D2B48C; }
+
+#cartTop strong { color: #000000; }
+
+#cartCol { text-align: center;}
+
+#inputSize { width: 138px; }
+
+.dropbtn { display: inline-block;
+           text-align: center;
+           text-decoration: none;
+           color: #FEF6C2 }
+
+.dropbtn:hover { color: #CC9933 }
+      
+.dropdown-content { display: none;
+                    position: center;
+                    background-color: #231814;
+                    min-width: 40px;
+                    text-align: center;
+                    padding-top: .25em;}
+      
+.dropdown-content a { color: black;
+                      padding: .5em;
+                      text-decoration: none;
+                      display: block;
+                      font-size: 13px; }
+
+.dropdown:hover .dropdown-content { display: block; }
+
+@media screen and (min-width: 600px) {
+header { text-align: center;
+         padding-left: 0; }
+h1 { font-size: 3em; }
+h4 { margin-left: 10%; 
+     margin-right: 10%; }
+nav ul { display: flex;
+         flex-direction: row;
+         flex-wrap: nowrap;
+         justify-content: space-around; }
+nav li { border-bottom: none; }
+#homehero { height: 50vh; 
+            background-image: url("hero.jpg"); }
+#heromugs { background-image: url("heromugs.jpg"); }
+#heroguitar { background-image: url("heroguitar.jpg"); }
+#flow { display: flex;
+        flex-direction: row; }
+#mobile { display: none; }
+#desktop { display: inline; }
+#details {display: flex;
+          flex-direction: row; }
+#inputSize { width: 160px; }
+.dropdown-content { position: absolute;
+                    text-align: left;}
+}
+
+@media screen and (min-width: 1024px) {
+header { grid-area: header; 
+         background-image: url("coffeelogo.jpg"); }
+nav { grid-area: nav; }
+nav ul { flex-direction: column; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+form { display: grid;
+        grid-template-columns: 6em 1fr;
+        grid-gap: 1em;
+        width: 40%;  }
+#orderform { display: flex;
+             width: 95%; }
+#submit { grid-column: 2; width: 9em; }
+#herojobs { background-image: url("herojobs.jpg"); }
+#wrapper { display: grid;
+           grid-template:
+                "header header"
+                "nav    main"
+                "footer footer"
+                / 200px; }
+}
+       
